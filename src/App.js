@@ -9,9 +9,7 @@ function App() {
   const title = useRef(null);
 
   useEffect(() => {
-    // console.log(title.current.children[0].children[0]);
-    gsap.to("body", 0, { css: { visibility: "visible" } });
-
+    window.scrollTo(0, 0);
     const tl = gsap.timeline();
     tl.from(".line span", 1.8, {
       y: 100,
@@ -44,9 +42,8 @@ function App() {
         stagger: {
           amount: 0.4
         }
-      })
-      .to("body", 0, { css: { overflowY: "scroll" } });
-  }, [title]);
+      });
+  }, []);
 
   return (
     <div className='App'>

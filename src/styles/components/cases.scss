@@ -38,6 +38,10 @@
           @include media("<=desktop", ">tablet") {
             font-size: 1.4rem;
           }
+          @include media("<=phone") {
+            font-size: 1.2rem;
+            line-height: 2.2rem;
+          }
         }
         h2 {
           font-size: 2.4rem;
@@ -48,6 +52,11 @@
           @include media("<=desktop", ">tablet") {
             font-size: 2rem;
             line-height: 2.4rem;
+          }
+          @include media("<=phone") {
+            font-size: 1.7rem;
+            line-height: 2.2rem;
+            margin-top: 8px;
           }
         }
       }

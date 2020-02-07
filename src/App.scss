@@ -9,18 +9,12 @@ body {
   user-select: none;
   background: $white;
   overscroll-behavior: none;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  visibility: hidden;
   margin: 0;
   font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // @include media("<=tablet") {
-  //   overflow-y: auto;
-  // }
 }
 
 .container {
@@ -71,6 +65,9 @@ body {
     height: 50vh;
     position: absolute;
     width: 100%;
+    @include media("<=tablet") {
+      height: 50%;
+    }
     .overlay-top {
       position: absolute;
       height: 100%;
@@ -103,6 +100,9 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
+    @include media("<=tablet") {
+      height: 50%;
+    }
     .overlay-bottom {
       position: absolute;
       height: 100%;
@@ -113,19 +113,24 @@ body {
       z-index: 4;
       &:nth-child(1) {
         @include media("<=tablet") {
-          display: none;
+          right: 0%;
+          width: 100vw;
         }
       }
       &:nth-child(2) {
         right: 33.3333%;
         @include media("<=tablet") {
-          display: none;
+          width: 100vw;
+          top: 100%;
+          right: 0%;
         }
       }
       &:nth-child(3) {
         right: 0%;
         @include media("<=tablet") {
           width: 100vw;
+          top: 200%;
+          right: 0%;
         }
       }
     }

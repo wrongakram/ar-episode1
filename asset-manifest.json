@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/ar-episode1/static/css/main.a34e6493.chunk.css",
+    "main.js": "/ar-episode1/static/js/main.f4c748c6.chunk.js",
+    "main.js.map": "/ar-episode1/static/js/main.f4c748c6.chunk.js.map",
+    "runtime-main.js": "/ar-episode1/static/js/runtime-main.c85519c1.js",
+    "runtime-main.js.map": "/ar-episode1/static/js/runtime-main.c85519c1.js.map",
+    "static/js/2.7aadb8e4.chunk.js": "/ar-episode1/static/js/2.7aadb8e4.chunk.js",
+    "static/js/2.7aadb8e4.chunk.js.map": "/ar-episode1/static/js/2.7aadb8e4.chunk.js.map",
+    "index.html": "/ar-episode1/index.html",
+    "precache-manifest.c26108c1654248ad3821d60588b630bd.js": "/ar-episode1/precache-manifest.c26108c1654248ad3821d60588b630bd.js",
+    "service-worker.js": "/ar-episode1/service-worker.js",
+    "static/css/main.a34e6493.chunk.css.map": "/ar-episode1/static/css/main.a34e6493.chunk.css.map",
+    "static/js/2.7aadb8e4.chunk.js.LICENSE.txt": "/ar-episode1/static/js/2.7aadb8e4.chunk.js.LICENSE.txt",
+    "static/media/arrow-right.dc372a07.svg": "/ar-episode1/static/media/arrow-right.dc372a07.svg",
+    "static/media/curology-min.png": "/ar-episode1/static/media/curology-min.e84c2055.png",
+    "static/media/lumin-min.png": "/ar-episode1/static/media/lumin-min.379bad94.png",
+    "static/media/yourspace-min.png": "/ar-episode1/static/media/yourspace-min.5f9e3077.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c85519c1.js",
+    "static/js/2.7aadb8e4.chunk.js",
+    "static/css/main.a34e6493.chunk.css",
+    "static/js/main.f4c748c6.chunk.js"
+  ]
+}

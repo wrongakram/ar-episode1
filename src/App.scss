@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap");
+@import "./styles/varibles.scss";
+@import "./styles/breakpoints.scss";
+@import "./styles/components/header.scss";
+@import "./styles/components/banner.scss";
+@import "./styles/components/cases.scss";
+
+body {
+  background: $white;
+  overscroll-behavior: none;
+  overflow-y: hidden;
+  margin: 0;
+  font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 1560px;
+  min-width: 1560px;
+  margin: 0 auto;
+  height: 100%;
+  @include media("<=1560px") {
+    width: 1280px;
+    min-width: 1280px;
+  }
+  @include media("<=desktop") {
+    width: 1080px;
+    min-width: 1080px;
+  }
+  @include media("<=1080px") {
+    width: 100%;
+    min-width: 100%;
+  }
+  .row {
+    display: flex;
+    height: 100%;
+    padding: 0 32px;
+    @include media("<=phone") {
+      padding: 0 16px;
+    }
+  }
+  .v-center {
+    align-items: center;
+  }
+  .space-between {
+    justify-content: space-between;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  height: 100%;
+  .row {
+    display: flex;
+    height: 100%;
+  }
+}
+
+//intro overlays
+.intro-overlay {
+  .overlay-top {
+    position: absolute;
+    height: 100%;
+    width: 33.3333vw;
+    background: $black;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    &:nth-child(2) {
+      left: 33.3333%;
+    }
+    &:nth-child(3) {
+      left: 66.6666%;
+    }
+  }
+}

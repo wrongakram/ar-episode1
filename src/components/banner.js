@@ -1,12 +1,12 @@
 import React from "react";
 import { ReactComponent as RightArrow } from "../assets/arrow-right.svg";
 
-const Banner = ({ title }) => {
+const Banner = () => {
   return (
     <section className='main'>
       <div className='container'>
         <div className='row'>
-          <h2 ref={title}>
+          <h2>
             <div className='line'>
               <span>Creating unique brands is</span>
             </div>

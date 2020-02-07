@@ -1,15 +1,18 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import gsap from "gsap";
-import "./App.scss";
+import "./styles/App.scss";
 import Header from "./components/header";
 import Banner from "./components/banner";
 import Cases from "./components/cases";
+import IntroOverlay from "./components/introOverlay";
 
 function App() {
-  const title = useRef(null);
-
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Preventing flash from happening.
+
+    gsap.to("body", 0, { css: { visibility: "visible" } });
+
+    //On load timeline
     const tl = gsap.timeline();
     tl.from(".line span", 1.8, {
       y: 100,
@@ -47,20 +50,9 @@ function App() {
 
   return (
     <div className='App'>
-      <div className='intro-overlay'>
-        <div className='top'>
-          <div className='overlay-top'></div>
-          <div className='overlay-top'></div>
-          <div className='overlay-top'></div>
-        </div>
-        <div className='bottom'>
-          <div className='overlay-bottom'></div>
-          <div className='overlay-bottom'></div>
-          <div className='overlay-bottom'></div>
-        </div>
-      </div>
+      <IntroOverlay />
       <Header />
-      <Banner title={title} />
+      <Banner />
       <Cases />
     </div>
   );

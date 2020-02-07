@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap");
-@import "./styles/varibles.scss";
-@import "./styles/breakpoints.scss";
-@import "./styles/components/header.scss";
-@import "./styles/components/banner.scss";
-@import "./styles/components/cases.scss";
+@import "./varibles.scss";
+@import "./breakpoints.scss";
+@import "./components/header.scss";
+@import "./components/banner.scss";
+@import "./components/cases.scss";
 
-body {
+body,
+html {
+  visibility: hidden;
   user-select: none;
   background: $white;
   overscroll-behavior: none;
@@ -65,6 +67,7 @@ body {
     height: 50vh;
     position: absolute;
     width: 100%;
+    z-index: 8;
     @include media("<=tablet") {
       height: 50%;
     }
@@ -76,7 +79,7 @@ body {
       bottom: 0;
       left: 0;
       right: 0;
-      z-index: 4;
+
       @include media("<=tablet") {
         width: 100vw;
       }
@@ -100,6 +103,7 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
+    z-index: 8;
     @include media("<=tablet") {
       height: 50%;
     }
@@ -110,7 +114,6 @@ body {
       background: $black;
       bottom: 0;
       right: 66.6666%;
-      z-index: 4;
       &:nth-child(1) {
         @include media("<=tablet") {
           right: 0%;

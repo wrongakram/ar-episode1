@@ -1,12 +1,47 @@
 .cases {
   height: 50vh;
+  .cases-navigation {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 6;
+    padding: 32px;
+    box-sizing: border-box;
+    @include media("<=tablet") {
+      display: none;
+    }
+    .cases-arrow {
+      background: rgba(0, 0, 0, 0.4);
+      height: 72px;
+      width: 72px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        color: $white;
+        height: 28px;
+        width: 28px;
+      }
+      &.disabled {
+        opacity: 0.3;
+      }
+      &.prev {
+      }
+      &.next {
+      }
+    }
+  }
   .row {
     @include media("<=tablet") {
       flex-direction: column;
     }
     .case {
       position: relative;
-      background: #000000;
+      background: $black;
       cursor: pointer;
       &:hover {
         .case-image {

@@ -1,4 +1,6 @@
 import React from "react";
+import { ReactComponent as CasesNext } from "../assets/arrow-right.svg";
+import { ReactComponent as LeftArrow } from "../assets/arrow-left.svg";
 
 const caseStudies = [
   {
@@ -25,6 +27,14 @@ const Cases = () => {
   return (
     <section className='cases'>
       <div className='container-fluid'>
+        <div className='cases-navigation'>
+          <div className='cases-arrow prev disabled'>
+            <LeftArrow />
+          </div>
+          <div className='cases-arrow next'>
+            <CasesNext />
+          </div>
+        </div>
         <div className='row'>
           {caseStudies.map(caseItem => (
             <div key={caseItem.id} className='case'>

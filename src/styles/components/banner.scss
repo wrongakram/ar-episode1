@@ -8,7 +8,7 @@
       font-size: 3rem;
       line-height: 4.2rem;
       font-weight: 700;
-      z-index: 99;
+      z-index: 10;
       color: $white;
       mix-blend-mode: difference;
       @include media("<=tablet") {
@@ -56,7 +56,9 @@
         svg {
           margin-left: 16px;
           border: 2px solid $black;
-          padding: 8px;
+          padding: 12px;
+          height: 24px;
+          width: 24px;
           border-radius: 100px;
           transition: 0.4s ease-in-out;
           @include media("<=tablet") {

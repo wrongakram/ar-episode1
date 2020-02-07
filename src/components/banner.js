@@ -8,10 +8,10 @@ const Banner = ({ title }) => {
         <div className='row'>
           <h2 ref={title}>
             <div className='line'>
-              <span>We craft eCommerce brands,</span>
+              <span>Creating unique brands is</span>
             </div>
             <div className='line'>
-              <span>driven by instinct.</span>
+              <span>what we do.</span>
             </div>
           </h2>
           <div className='btn-row'>

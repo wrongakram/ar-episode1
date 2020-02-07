@@ -11,22 +11,34 @@
       z-index: 99;
       color: $white;
       mix-blend-mode: difference;
+      @include media("<=tablet") {
+        font-size: 2.4rem;
+        line-height: 3rem;
+      }
+      @include media("<=phone") {
+        font-size: 1.7rem;
+        line-height: 2.2rem;
+      }
       .line {
         margin-bottom: 8px;
         height: 56px;
         position: relative;
         overflow: hidden;
+        @include media("<=tablet") {
+          height: 48px;
+        }
+        @include media("<=phone") {
+          height: 32px;
+        }
         span {
           position: absolute;
-          @include media("<=phone") {
-            font-size: 1.55rem;
-            line-height: 2.4rem;
-          }
         }
       }
     }
     .btn-row {
       width: 256px;
+      position: relative;
+      z-index: 2;
       a {
         display: inline-block;
         font-size: 1.6rem;
@@ -35,6 +47,9 @@
         display: flex;
         align-items: center;
         font-weight: 600;
+        @include media("<=tablet") {
+          font-size: 1.3rem;
+        }
         @include media("<=phone") {
           font-size: 1.1rem;
         }
@@ -44,11 +59,15 @@
           padding: 8px;
           border-radius: 100px;
           transition: 0.4s ease-in-out;
+          @include media("<=tablet") {
+            padding: 6px;
+            width: 20px;
+            height: 20px;
+          }
           @include media("<=phone") {
             padding: 4px;
             width: 16px;
             height: 16px;
-            border: 2px solid $black;
           }
         }
         &:hover {

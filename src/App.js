@@ -10,8 +10,9 @@ function App() {
 
   useEffect(() => {
     // console.log(title.current.children[0].children[0]);
-    const tl = gsap.timeline();
+    gsap.to("body", 0, { css: { visibility: "visible" } });
 
+    const tl = gsap.timeline();
     tl.from(".line span", 1.8, {
       y: 100,
       ease: "power4.out",
@@ -28,22 +29,38 @@ function App() {
           amount: 0.4
         }
       })
-      .from(".case-image img", 2, {
-        scale: 1.3,
+      .to(".overlay-bottom", 1.6, {
+        width: 0,
         ease: "expo.inOut",
-        delay: -1.4,
+        delay: -0.8,
         stagger: {
-          amount: 0.3
+          amount: 0.4
         }
-      });
+      })
+      .from(".case-image img", 1.6, {
+        scale: 1.4,
+        ease: "expo.inOut",
+        delay: -2,
+        stagger: {
+          amount: 0.4
+        }
+      })
+      .to("body", 0, { css: { overflowY: "scroll" } });
   }, [title]);
 
   return (
     <div className='App'>
       <div className='intro-overlay'>
-        <div className='overlay-top'></div>
-        <div className='overlay-top'></div>
-        <div className='overlay-top'></div>
+        <div className='top'>
+          <div className='overlay-top'></div>
+          <div className='overlay-top'></div>
+          <div className='overlay-top'></div>
+        </div>
+        <div className='bottom'>
+          <div className='overlay-bottom'></div>
+          <div className='overlay-bottom'></div>
+          <div className='overlay-bottom'></div>
+        </div>
       </div>
       <Header />
       <Banner title={title} />

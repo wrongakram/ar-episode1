@@ -3,23 +3,21 @@ import React from "react";
 const caseStudies = [
   {
     id: 1,
-    subtitle: "Skin Elixir",
-    title: "The innovative anti-aging serum",
-    img:
-      "https://melriver.com/wp-content/uploads/2019/12/EcorceVerte_case-study-2250x1805.jpg"
+    subtitle: "Curology",
+    title: "A custom formula for your skin’s unique needs",
+    img: "curology-min"
   },
   {
     id: 2,
-    subtitle: "Bored of Authority",
-    title: "Speaks to your individual passions with BOA",
-    img: "https://melriver.com/wp-content/uploads/2019/12/BOA_case-study.jpg"
+    subtitle: "Yourspace",
+    title: "Open space floor plans for you next venture",
+    img: "yourspace-min"
   },
   {
     id: 3,
-    subtitle: "Just Away",
-    title: "The cleaning kit for airpods",
-    img:
-      "https://melriver.com/wp-content/uploads/2019/12/SkinElixir_case-study-2250x1500.jpg"
+    subtitle: "Lumin",
+    title: "For your best look ever",
+    img: "lumin-min"
   }
 ];
 
@@ -35,7 +33,7 @@ const Cases = () => {
                 <h2>{caseItem.title}</h2>
               </div>
               <div className='case-image'>
-                <img src={caseItem.img} alt='' />
+                <img src={require(`../assets/${caseItem.img}.png`)} alt='' />
               </div>
             </div>
           ))}

@@ -1,15 +1,16 @@
 .cases {
   height: 50vh;
   .row {
+    @include media("<=tablet") {
+      flex-direction: column;
+    }
     .case {
       position: relative;
       background: #000000;
       cursor: pointer;
       &:hover {
-        transition: 0.4s cubic-bezier(0.6, -0.05, 0.1, 0.99);
-        img {
+        .case-image {
           opacity: 0.4 !important;
-          transition: 0.4s cubic-bezier(0.6, -0.05, 0.1, 0.99);
         }
       }
       .case-details {
@@ -22,12 +23,21 @@
         box-sizing: border-box;
         z-index: 1;
         position: relative;
+        @include media("<=phone") {
+          padding: 16px;
+        }
+        @include media("<=tablet") {
+          width: 100vw;
+        }
         span {
           margin-top: 156px;
           font-size: 1.6rem;
           opacity: 0.8;
           color: $white;
           font-weight: 600;
+          @include media("<=desktop", ">tablet") {
+            font-size: 1.4rem;
+          }
         }
         h2 {
           font-size: 2.4rem;
@@ -35,6 +45,10 @@
           width: 85%;
           margin-top: 16px;
           color: $white;
+          @include media("<=desktop", ">tablet") {
+            font-size: 2rem;
+            line-height: 2.4rem;
+          }
         }
       }
       .case-image {
@@ -44,10 +58,12 @@
         height: 100%;
         overflow: hidden;
         position: absolute;
+        opacity: 0.65;
+        transition: 0.4s cubic-bezier(0.6, -0.05, 0.1, 0.99);
         img {
           height: 100%;
+          width: 100%;
           object-fit: cover;
-          opacity: 0.65;
         }
       }
     }

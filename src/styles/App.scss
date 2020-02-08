@@ -7,7 +7,6 @@
 
 body,
 html {
-  visibility: hidden;
   user-select: none;
   background: $white;
   overscroll-behavior: none;
@@ -58,79 +57,5 @@ html {
   .row {
     display: flex;
     height: 100%;
-  }
-}
-
-//intro overlays
-.intro-overlay {
-  .top {
-    height: 50vh;
-    height: calc(var(--vh, 1vh) * 50);
-    position: absolute;
-    width: 100%;
-    z-index: 8;
-    .overlay-top {
-      position: absolute;
-      height: 100%;
-      width: 33.3333vw;
-      background: $black;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      @include media("<=tablet") {
-        width: 100vw;
-      }
-      &:nth-child(2) {
-        left: 33.3333%;
-        @include media("<=tablet") {
-          display: none;
-        }
-      }
-      &:nth-child(3) {
-        left: 66.6666%;
-        @include media("<=tablet") {
-          display: none;
-        }
-      }
-    }
-  }
-
-  .bottom {
-    height: 50vh;
-    height: calc(var(--vh, 1vh) * 50);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    z-index: 8;
-    .overlay-bottom {
-      position: absolute;
-      height: 100%;
-      width: 33.3333vw;
-      background: $black;
-      bottom: 0;
-      right: 66.6666%;
-      &:nth-child(1) {
-        @include media("<=tablet") {
-          right: 0%;
-          width: 100vw;
-        }
-      }
-      &:nth-child(2) {
-        right: 33.3333%;
-        @include media("<=tablet") {
-          width: 100vw;
-          top: 100%;
-          right: 0%;
-        }
-      }
-      &:nth-child(3) {
-        right: 0%;
-        @include media("<=tablet") {
-          width: 100vw;
-          top: 200%;
-          right: 0%;
-        }
-      }
-    }
   }
 }

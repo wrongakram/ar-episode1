@@ -1,5 +1,6 @@
 .main {
   height: 50vh;
+  height: calc(var(--vh, 1vh) * 50);
   background-color: $white;
   .row {
     flex-direction: column;
@@ -16,6 +17,7 @@
         line-height: 3rem;
       }
       @include media("<=phone") {
+        margin-top: 72px;
         font-size: 1.7rem;
         line-height: 2.2rem;
       }

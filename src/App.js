@@ -8,8 +8,12 @@ import IntroOverlay from "./components/introOverlay";
 
 function App() {
   useEffect(() => {
-    // Preventing flash from happening.
+    //Grab inner height of window for mobile reasons when dealing with vh
+    let vh = window.innerHeight * 0.01;
+    //Set css varible vh
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
 
+    // Preventing flash from happening.
     gsap.to("body", 0, { css: { visibility: "visible" } });
 
     //On load timeline
@@ -38,6 +42,7 @@ function App() {
           amount: 0.4
         }
       })
+      .to(".intro-overlay", 0, { css: { display: "none" } })
       .from(".case-image img", 1.6, {
         scale: 1.4,
         ease: "expo.inOut",

@@ -65,12 +65,10 @@ html {
 .intro-overlay {
   .top {
     height: 50vh;
+    height: calc(var(--vh, 1vh) * 50);
     position: absolute;
     width: 100%;
     z-index: 8;
-    @include media("<=tablet") {
-      height: 50%;
-    }
     .overlay-top {
       position: absolute;
       height: 100%;
@@ -79,7 +77,6 @@ html {
       bottom: 0;
       left: 0;
       right: 0;
-
       @include media("<=tablet") {
         width: 100vw;
       }
@@ -100,13 +97,11 @@ html {
 
   .bottom {
     height: 50vh;
+    height: calc(var(--vh, 1vh) * 50);
     position: absolute;
     bottom: 0;
     width: 100%;
     z-index: 8;
-    @include media("<=tablet") {
-      height: 50%;
-    }
     .overlay-bottom {
       position: absolute;
       height: 100%;

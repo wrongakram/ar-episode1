@@ -1,5 +1,6 @@
 .cases {
   height: 50vh;
+  height: calc(var(--vh, 1vh) * 50);
   .cases-navigation {
     position: absolute;
     bottom: 0px;
@@ -29,10 +30,6 @@
       &.disabled {
         opacity: 0.3;
       }
-      &.prev {
-      }
-      &.next {
-      }
     }
   }
   .row {
@@ -51,6 +48,7 @@
       .case-details {
         width: 33.3333vw;
         height: 50vh;
+        height: calc(var(--vh, 1vh) * 50);
         display: flex;
         flex-direction: column;
         justify-content: center;

@@ -1,0 +1,57 @@
+.header {
+  position: fixed;
+  width: 100%;
+  height: 128px;
+  z-index: 4;
+  @include media("<=phone") {
+    height: 96px;
+  }
+  .logo {
+    a {
+      font-size: 1.2rem;
+      letter-spacing: 0.5rem;
+      color: $black;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  }
+  .nav-toggle {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include media("<=tablet") {
+      margin-right: 24px;
+    }
+    @include media("<=phone") {
+      width: 20px;
+      margin-right: 16px;
+    }
+
+    .hamburger-menu {
+      width: 25px;
+      span {
+        text-align: center;
+        margin-bottom: 0.3rem;
+        background: $black;
+        height: 2px;
+        width: 100%;
+        display: block;
+      }
+    }
+    .hamburger-menu-close {
+      position: absolute;
+      display: none;
+
+      svg {
+        @include media("<=tablet") {
+          width: 56px;
+        }
+        @include media("<=phone") {
+          width: 48px;
+        }
+      }
+    }
+  }
+}

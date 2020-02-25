@@ -42,7 +42,7 @@
       cursor: pointer;
       &:hover {
         .case-image {
-          opacity: 0.4 !important;
+          opacity: 0.4;
         }
       }
       .case-details {
@@ -56,11 +56,11 @@
         box-sizing: border-box;
         z-index: 1;
         position: relative;
-        @include media("<=phone") {
-          padding: 16px;
-        }
         @include media("<=tablet") {
           width: 100vw;
+        }
+        @include media("<=phone") {
+          padding: 16px;
         }
         span {
           margin-top: 156px;

@@ -1,5 +1,5 @@
 .main {
-  height: 50vh;
+  height: 50vh; //fallback option
   height: calc(var(--vh, 1vh) * 50);
   background-color: $white;
   .row {
@@ -42,7 +42,6 @@
       position: relative;
       z-index: 2;
       a {
-        display: inline-block;
         font-size: 1.6rem;
         color: $black;
         text-decoration: none;

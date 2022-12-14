@@ -1,7 +1,11 @@
 .cases {
   height: 50vh;
+<<<<<<< HEAD
   height: calc(var(var(--vh), 1vh) * 50);
   position: relative;
+=======
+  height: calc(var(--vh, 1vh) * 50);
+>>>>>>> master
   .cases-navigation {
     position: absolute;
     bottom: 0px;
@@ -21,8 +25,13 @@
       width: 72px;
       border-radius: 100%;
       display: flex;
+<<<<<<< HEAD
       justify-content: center;
       align-items: center;
+=======
+      align-items: center;
+      justify-content: center;
+>>>>>>> master
       svg {
         color: $white;
         height: 28px;
@@ -47,8 +56,14 @@
         }
       }
       .case-details {
+<<<<<<< HEAD
         width: 33.333vw;
         height: calc(var(var(--vh), 1vh) * 50);
+=======
+        width: 33.3333vw;
+        height: 50vh;
+        height: calc(var(--vh, 1vh) * 50);
+>>>>>>> master
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -62,7 +77,10 @@
         @include media("<=phone") {
           padding: 16px;
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
         span {
           margin-top: 156px;
           font-size: 1.6rem;
@@ -83,9 +101,20 @@
           width: 85%;
           margin-top: 16px;
           color: $white;
+<<<<<<< HEAD
           @include media("<=phone") {
             font-size: 1.4rem;
             line-height: 2.2rem;
+=======
+          @include media("<=desktop", ">tablet") {
+            font-size: 2rem;
+            line-height: 2.4rem;
+          }
+          @include media("<=phone") {
+            font-size: 1.7rem;
+            line-height: 2.2rem;
+            margin-top: 8px;
+>>>>>>> master
           }
         }
       }
@@ -97,7 +126,11 @@
         overflow: hidden;
         position: absolute;
         opacity: 0.65;
+<<<<<<< HEAD
         transition: 0.4s cubic-bezier(0.6, -0.5, 0.1, 0.99);
+=======
+        transition: 0.4s cubic-bezier(0.6, -0.05, 0.1, 0.99);
+>>>>>>> master
         img {
           height: 100%;
           width: 100%;

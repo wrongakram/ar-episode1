@@ -42,7 +42,10 @@
       position: relative;
       z-index: 2;
       a {
+<<<<<<< HEAD
         display: inline-block;
+=======
+>>>>>>> master
         font-size: 1.6rem;
         color: $black;
         text-decoration: none;
@@ -50,12 +53,20 @@
         align-items: center;
         font-weight: 600;
         @include media("<=tablet") {
+<<<<<<< HEAD
           height: 1.5rem;
         }
         @include media("<=phone") {
           height: 1.1rem;
         }
 
+=======
+          font-size: 1.3rem;
+        }
+        @include media("<=phone") {
+          font-size: 1.1rem;
+        }
+>>>>>>> master
         svg {
           margin-left: 16px;
           border: 2px solid $black;

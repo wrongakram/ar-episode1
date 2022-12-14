@@ -25,14 +25,24 @@
       margin-right: 24px;
     }
     @include media("<=phone") {
+<<<<<<< HEAD
       margin-right: 16px;
       width: 20px;
+=======
+      width: 20px;
+      margin-right: 16px;
+>>>>>>> master
     }
 
     .hamburger-menu {
       width: 25px;
+<<<<<<< HEAD
 
       span {
+=======
+      span {
+        text-align: center;
+>>>>>>> master
         margin-bottom: 0.3rem;
         background: $black;
         height: 2px;
@@ -43,6 +53,10 @@
     .hamburger-menu-close {
       position: absolute;
       display: none;
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
       svg {
         @include media("<=tablet") {
           width: 56px;

@@ -1,12 +1,22 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+=======
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700&display=swap");
+>>>>>>> master
 @import "./varibles.scss";
 @import "./breakpoints.scss";
 @import "./components/header.scss";
 @import "./components/banner.scss";
 @import "./components/cases.scss";
+@import "./components/navigation.scss";
+<<<<<<< HEAD
+=======
 
+>>>>>>> master
 body,
 html {
+  visibility: hidden;
   user-select: none;
   background: $white;
   overscroll-behavior: none;
@@ -57,5 +67,143 @@ html {
   .row {
     display: flex;
     height: 100%;
+  }
+}
+
+<<<<<<< HEAD
+//intro overlay
+=======
+// intro overlay
+>>>>>>> master
+.intro-overlay {
+  .top {
+    height: 50vh;
+    height: calc(var(--vh, 1vh) * 50);
+    position: absolute;
+<<<<<<< HEAD
+    z-index: 8;
+    width: 100%;
+=======
+    width: 100%;
+    z-index: 8;
+>>>>>>> master
+    .overlay-top {
+      position: absolute;
+      height: 100%;
+      width: 33.333vw;
+      background: $black;
+      bottom: 0;
+      left: 0;
+      right: 0;
+<<<<<<< HEAD
+
+      @include media("<=tablet") {
+        width: 100vw;
+      }
+
+      &:nth-child(2) {
+        background-color: $black;
+        left: 33.333%;
+
+=======
+      @include media("<=tablet") {
+        width: 100vw;
+      }
+      &:nth-child(2) {
+        left: 33.333%;
+>>>>>>> master
+        @include media("<=tablet") {
+          display: none;
+        }
+      }
+      &:nth-child(3) {
+<<<<<<< HEAD
+        background-color: $black;
+        left: 66.666%;
+
+=======
+        left: 66.666%;
+>>>>>>> master
+        @include media("<=tablet") {
+          display: none;
+        }
+      }
+    }
+  }
+  .bottom {
+    height: 50vh;
+    height: calc(var(--vh, 1vh) * 50);
+    position: absolute;
+<<<<<<< HEAD
+    z-index: 8;
+    width: 100%;
+    bottom: 0;
+=======
+    bottom: 0;
+    width: 100%;
+    z-index: 8;
+>>>>>>> master
+    .overlay-bottom {
+      position: absolute;
+      height: 100%;
+      width: 33.333vw;
+      background: $black;
+      bottom: 0;
+<<<<<<< HEAD
+      right: 66.6666%;
+
+=======
+      right: 66.666%;
+>>>>>>> master
+      @include media("<=tablet") {
+        right: 0;
+        width: 100vw;
+      }
+<<<<<<< HEAD
+
+      &:nth-child(2) {
+        background-color: $black;
+        right: 33.333%;
+
+=======
+      &:nth-child(2) {
+        right: 33.333%;
+>>>>>>> master
+        @include media("<=tablet") {
+          width: 100vw;
+          top: 100%;
+          right: 0;
+        }
+      }
+      &:nth-child(3) {
+<<<<<<< HEAD
+        background-color: $black;
+        right: 0%;
+
+=======
+        right: 0;
+>>>>>>> master
+        @include media("<=tablet") {
+          width: 100vw;
+          top: 200%;
+        }
+      }
+    }
+  }
+}
+
+.App {
+  z-index: 2;
+  transform: translateY(0);
+  position: relative;
+}
+
+.page {
+  height: 100vh;
+  width: 100%;
+  background: $white;
+  .row {
+    display: flex;
+    align-items: center;
   }
 }
